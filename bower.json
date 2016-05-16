@@ -1,0 +1,22 @@
+{
+  "name": "ng-array-filter",
+  "description": "an angularJS array filter, that supports deep document filtering",
+  "main": "./dist/ng-array-filter.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/phaldiya/ng-array-filter",
+  "authors": [
+    "Pradeep K Haldiya <pradeep.haldiya@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "ng",
+    "AngularJS",
+    "filters",
+    "Filters",
+    "Array",
+    "array"
+  ],
+  "license": "MIT"
+}
