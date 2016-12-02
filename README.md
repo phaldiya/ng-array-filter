@@ -30,9 +30,9 @@ npm install --save ng-array-filter
 ##  How to use
 
 
-1. Import the ```ng-array-filter.min.js``` script in your page.
+1. Import the ```dist/ng-array-filter.min.js``` script and include the module ```ng-array-filter``` into app.js
 
-2. Include the module ```ng-array-filter``` in your angular app.
+2. **OR** ```require('ng-array-filter')``` into app.js.
 
 3. Use it as an angular filter:
 
@@ -53,7 +53,7 @@ var ctrl.items = [
 <!--
 to get the all items that have brand **Lasko**
 -->
-<div ng-repeat="item in ctrl.items | ng-array-filter: {brands: 'lasko'}">
+<div ng-repeat="item in ctrl.items | ngArrayFilter: {brands: 'lasko'}">
 ...
 </div>
 
@@ -61,7 +61,7 @@ to get the all items that have brand **Lasko**
 Want case sensitive filtering?
 pass boolean parameter caseSensitive
 -->
-<div ng-repeat="item in ctrl.items | ng-array-filter: {brands: 'Lasko'}: true">
+<div ng-repeat="item in ctrl.items | ngArrayFilter: {brands: 'Lasko'}: true">
 ...
 </div>
 
@@ -95,7 +95,7 @@ var ctrl.items = [
 to get the all items that have brand name **Lasko**
 -->
 
-<div ng-repeat="item in ctrl.items | ng-array-filter: {brands: {name: 'Lasko'}}">
+<div ng-repeat="item in ctrl.items | ngArrayFilter: {brands: {name: 'Lasko'}}">
 ...
 </div>
 ```

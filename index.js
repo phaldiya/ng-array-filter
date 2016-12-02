@@ -1,2 +1,2 @@
 require('./src/ng-array-filter-browserify');
-module.exports = 'ngArrayFilter';
+module.exports = 'ng-array-filter';
