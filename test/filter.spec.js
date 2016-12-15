@@ -3,7 +3,7 @@
 var expect = require('chai').expect;
 var Filter = require('../src/filter');
 
-describe('ngArrayFilter', function () {
+describe('ngArrayFilter', function() {
   var filter = new Filter();
 
   it('array filter exixts', function() {
@@ -11,8 +11,10 @@ describe('ngArrayFilter', function () {
   });
 
   it('should be able to filter array document', function() {
-    var items = [{name: 'fan', brands: ['Lasko', 'GE', 'Hamilton Beach', 'Sunbeam']},
-      {name: 'microwave oven', brands: ['GE', 'Hamilton Beach', 'Sunbeam']}];
+    var items = [
+      {name: 'fan', brands: ['Lasko', 'GE', 'Hamilton Beach', 'Sunbeam']},
+      {name: 'microwave oven', brands: ['GE', 'Hamilton Beach', 'Sunbeam']},
+      {name: 'tv', brands: undefined}];
     var predicate = {brands: 'lasko'};
     var expectedResult = [{name: 'fan', brands: ['Lasko', 'GE', 'Hamilton Beach', 'Sunbeam']}];
 
@@ -40,9 +42,9 @@ describe('ngArrayFilter', function () {
     }];
     var predicate = {brands: {name: 'Lasko'}};
     var expectedResult = [{
-        "name": "fan",
-        "brands": [{"name": "Lasko", "price": 25}, {"name": "GE", "price": 22.25}, {"name": "Hamilton Beach", "price": 18}, {"name": "Sunbeam", "price": 19}]
-      }
+      "name": "fan",
+      "brands": [{"name": "Lasko", "price": 25}, {"name": "GE", "price": 22.25}, {"name": "Hamilton Beach", "price": 18}, {"name": "Sunbeam", "price": 19}]
+    }
     ];
 
     var results = new Filter(items, predicate);

@@ -2,7 +2,7 @@
   "name": "ng-array-filter",
   "description": "an angularJS array filter, that supports deep document filtering",
   "main": "./index.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Pradeep K Haldiya <pradeep.haldiya@gmail.com>"
   ],
@@ -35,6 +35,7 @@
     "conventional-changelog": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-header": "^1.8.8",
+    "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "gulp-load-plugins": "^1.4.0",
     "gulp-mocha": "^3.0.1",

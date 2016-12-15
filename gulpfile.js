@@ -70,7 +70,13 @@ gulp.task('build', ['lint', 'spec'], function(done) {
   done();
 });
 
-gulp.task('default', ['lint', 'spec', 'build'], function() {
+gulp.task('jscs', function() {
+  return gulp.src(['src/*.js', 'test/*.js'])
+    .pipe(plugins.jscs())
+    .pipe(plugins.jscs.reporter());
+});
+
+gulp.task('default', ['lint', 'jscs', 'spec', 'build'], function() {
   gulp.watch(config.src.files, ['lint', 'spec', 'build']);
 });
 
